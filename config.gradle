@@ -1,0 +1,9 @@
+ext{
+    applicationId = "com.demo.kidd.androiddemos"
+    minSdkVersion = 15
+    targetSdkVersion = 27
+    compileSdkVersion = 27
+
+    baseUrl = ""
+
+}
