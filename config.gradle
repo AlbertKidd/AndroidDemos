@@ -4,6 +4,4 @@ ext{
     targetSdkVersion = 27
     compileSdkVersion = 27
 
-    baseUrl = ""
-
 }

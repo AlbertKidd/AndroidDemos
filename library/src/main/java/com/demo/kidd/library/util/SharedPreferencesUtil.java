@@ -13,6 +13,8 @@ import lombok.Getter;
  */
 public class SharedPreferencesUtil {
 
+    public static final String KEY_BASE_URL = "BaseUrl";
+
     @Getter
     private SharedPreferences preferences;
 

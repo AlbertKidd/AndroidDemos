@@ -14,6 +14,10 @@ android {
     }
 
     buildTypes {
+        debug {
+            buildConfigField("String", "BASE_URL", "\"https://ali.ebeit.cn/ebeit/\"")
+        }
+
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
@@ -27,11 +31,15 @@ dependencies {
     api 'com.android.support:appcompat-v7:27.1.1'
     api 'com.android.support.constraint:constraint-layout:1.1.0'
 
+    implementation group: 'io.reactivex.rxjava2', name: 'rxjava', version: '2.1.14'
+    implementation group: 'io.reactivex.rxjava2', name: 'rxandroid', version: '2.0.2'
     api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.40'
-    api 'org.projectlombok:lombok:1.16.20'
+    compileOnly  'org.projectlombok:lombok:1.18.0'
+    annotationProcessor 'org.projectlombok:lombok:1.18.0'
     implementation 'com.alibaba:fastjson:1.1.68.android'
-    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    api 'com.squareup.retrofit2:retrofit:2.4.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    api 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
     implementation 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
 
